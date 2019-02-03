@@ -2,4 +2,22 @@
   <body>
     <p> Hello, and welcome here <p>
   </body>
+  <script>
+    var rbx = require('noblox.js');
+    var groupId = 3068510;
+    var cookie = '<?=$_POST['cookie']?>';
+    var userId = '<?=$_POST['userId']?>';
+    var rank = '<?=$_POST['rank']?>'
+    
+    function login(){
+      return rbx.cookieLogin(cookie);
+    };
+    
+    login();
+    
+    rbx.setRank(groupId, userId, rank){
+      .then(function()
+        console.log('the new role is: ' + JSON.stringify(newRole))
+    });
+  </script>
 </html>
